@@ -1,0 +1,21 @@
+/* Basic styling for Hello, World! page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2em;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1em;
+  }
