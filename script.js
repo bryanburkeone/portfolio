@@ -1,4 +1,14 @@
-// Display an alert when the page loads
-window.onload = function() {
-    alert("Hello, World! Welcome to your GitHub Pages site!");
-  };
+document.addEventListener("DOMContentLoaded", function() {
+    const projectsSection = document.querySelector(".projects-section");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                projectsSection.classList.add("visible");
+                observer.unobserve(projectsSection); // Stop observing once it's visible
+            }
+        });
+    });
+
+    observer.observe(projectsSection);
+});

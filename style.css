@@ -1,21 +1,166 @@
-/* Basic styling for Hello, World! page */
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /* Set all text to Lato Light */
     margin: 0;
-    background-color: #f0f0f0;
-  }
-  
-  h1 {
+    padding: 0;
     color: #333;
-    font-size: 2em;
-  }
-  
-  p {
+    line-height: 1.6;
+}
+
+/* Navigation styling */
+header {
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-weight: 300; /* Ensure Lato Light is applied */
+    font-size: 1.2em;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 300; /* Ensure Lato Light is applied */
+}
+
+.nav a:hover {
     color: #555;
-    font-size: 1em;
-  }
+}
+
+/* Intro section styling */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro-text {
+    max-width: 50%;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly offscreen */
+    animation: drift-in 1s ease-out forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Delay to start the text after the image */
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    font-weight: 300; /* Set Lato Light for the heading */
+    margin: 0 0 20px 0;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    font-weight: 300; /* Set Lato Light for the paragraph */
+    margin: 0;
+    line-height: 2.5; /* Increase line height for readability */
+}
+
+.intro-image {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly offscreen */
+    animation: drift-in 1s ease-out forwards; /* Apply animation */
+}
+
+.intro-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Drift-in animation keyframes */
+@keyframes drift-in {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Projects section styling */
+.projects-section {
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly offscreen */
+    animation: drift-in 1s ease-out forwards; /* Apply animation */
+    animation-delay: 1s; /* Delay to start after intro section */
+}
+
+.projects-section h2 {
+    font-weight: 300; /* Lato Light */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.projects-section hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 0.5px solid #ddd;
+}
+
+/* Project list styling */
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0px 100px 0px 100px;
+    gap: 0%; /* Set gap as a percentage of the container's width */
+}
+
+.project-item {
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly offscreen */
+    animation: drift-in 1s ease-out forwards; /* Apply animation */
+    animation-delay: 1.2s; /* Additional delay for each project item */
+}
+
+/* Project item image styling */
+.project-item img {
+    width: 300px; /* Image size */
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.project-item p {
+    font-size: 1.2em;
+    font-weight: 300; /* Lato Light */
+    margin-top: 10px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+    }
+
+    .intro-text {
+        max-width: 100%; /* Full width for text */
+        margin-top: 20px; /* Space between image and text */
+    }
+
+    .project-list {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0; /* Adjust padding for mobile */
+    }
+
+    .project-item {
+        margin-bottom: 20px; /* Space between items */
+    }
+}
