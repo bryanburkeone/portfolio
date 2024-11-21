@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* Overall styling */
+  body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /* Set all text to Lato Light */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Navigation styling */
+  header {
+    padding: 20px;
+    background-color: #ffffff; /* Optional: Add a light background color for header */
+
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .name {
+    font-weight: 300; /* Ensure Lato Light is applied */
+    font-size: 1.2em;
+  }
+
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+
+  }
+
+  .nav a:hover {
+    color: #555;
+  }
+
+  /* Active link styling */
+  .nav a.active {
+    font-weight: 500; /* Makes the active link bold */
+  }
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  /* Section headings */
+  h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+  }
+  
+  /* Summary section */
+  .summary {
+    margin-bottom: 20px;
+  }
+  
+  /* Two-column layout for Education and Certifications */
+  .education-certifications {
+    display: flex;
+    justify-content: space-between;
+  }
+  .education, .certifications {
+    width: 48%;
+  }
+  
+  /* Experience section */
+  .experience-item {
+    margin-bottom: 20px;
+  }
+  .experience-item h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .experience-item .position {
+    font-style: italic;
+    color: #666;
+  }
+  .experience-item ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  .experience-item ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Skills section */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .skills h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="nav">
+    <span class="name">Bryan Burke</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html" class="active">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Bryan J Burke</h1>
+    <a href="mailto:BryanBurke.J@gmail.com">BryanBurke.J@gmail.com</a> | (607) 240-1906 | 
+    <a href="https://linkedin.com/in/bburkej" target="_blank">linkedin.com/in/bburkej</a> | 
+    <a href="https://drive.google.com/uc?export=download&id=1JtL0qZYjVlsR0HH06fF9RTFSTz9V36no" target="_blank" style="text-decoration: none; color: #0073b1;">
+      Download Resume as PDF
+    </a>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="summary">
+    <h2>SUMMARY</h2>
+    <p>Recent graduate from the University of California, San Diego with a Bachelor of Science in Cognitive Science (Specialization in Design and Interaction). Eager to start my career and willing to take on any challenge. I am passionate about learning new skills, applying them effectively, and making an impact at an organization. Highly adaptable and motivated to contribute in any capacity to help teams achieve their goals while building a lasting and fulfilling career.</p>
+  </div>
+
+  <!-- Education and Certifications -->
+  <div class="education-certifications">
+    <div class="education">
+      <h2>EDUCATION</h2>
+      <p><strong>University of California, San Diego (UCSD)</strong><br>Bachelor of Science, Cognitive Science (Specialization in Design and Interaction) – June 2024</p>
+      <p><strong>Mesa Community College</strong><br>Associate Degree for Transfer (ADT) – May 2022</p>
+    </div>
+    <div class="certifications">
+      <h2>CERTIFICATIONS</h2>
+      <p><strong>UCSD Extended Studies</strong><br>Full Stack Development Certification - April 2018</p>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <h2>EXPERIENCE</h2>
+  <div class="experience-item">
+    <h3>JAGUAR SOFTWARE – Pacific Beach, San Diego, CA</h3>
+    <p class="position">Full Stack Developer | May 2018 - Feb 2023</p>
+    <ul>
+      <li>Designed, built, and deployed a full-stack internal Project Management Application, providing valuable insights for future development and enhancing team workflows.</li>
+      <li>Developed and implemented a custom Power BI visual suite for internal and client use, facilitating more efficient data-driven decision-making.</li>
+      <li>Led cross-functional teams in gathering requirements and translating them into scalable, user-friendly solutions aligned with business goals.</li>
+      <li>Optimized application performance, reducing load times and improving overall user experience.</li>
+      <li>Provided ongoing support and training to staff, ensuring effective utilization of project management tools and Power BI solutions.</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <h3>XTREME PRO LITES – Murrieta, CA</h3>
+    <p class="position">Parts Manager | Jan 2012 - Dec 2017</p>
+    <ul>
+      <li>Managed parts inventory, ensuring accurate tracking and timely stock replenishment to maintain operational readiness for a professional motocross and supercross race team.</li>
+      <li>Designed and implemented efficient inventory management systems and processes, reducing discrepancies and optimizing operations.</li>
+      <li>Coordinated with team members and suppliers to fulfill inventory needs, contributing to the team’s overall success.</li>
+      <li>Collaborated in the creation and testing of a prototype motorcycle part, which was later patented and used in production KTM and Husqvarna motorcycles, contributing to the company’s innovation efforts.</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <h3>XTREME PRO LITES – Corona, CA</h3>
+    <p class="position">Hospitality and Race Hauler Driver | Jan 2010 - Dec 2012</p>
+    <ul>
+      <li>Safely transported the race hauler to 32 motocross and supercross events across the U.S., ensuring timely and precise arrival at each venue.</li>
+      <li>Managed all aspects of hauler maintenance and cleanliness, ensuring vehicles were always race-ready and compliant with event standards.</li>
+      <li>Led the setup and breakdown of the hospitality area, including tents, displays, and VIP sections, enhancing team visibility and guest experiences.</li>
+      <li>Coordinated logistics and provided high-level hospitality services for VIPs and guests, ensuring a seamless and welcoming environment at each event.</li>
+    </ul>
+  </div>
+
+  <!-- Skills Section -->
+  <h2>SKILLS & ACTIVITIES</h2>
+  <div class="skills">
+    <div>
+      <h3>Programming Languages</h3>
+      <p>JavaScript, TypeScript, Java, C/C++, Python, SQL</p>
+      <h3>Web Technologies</h3>
+      <p>React.js, Node.js, Next.js, Express, REST API, Web Services Development, GraphQL, Apollo</p>
+      <h3>Database Management</h3>
+      <p>SQL, NoSQL, Mongoose</p>
+      <h3>Testing & Automation</h3>
+      <p>Unit Testing, Regression Testing, Automation Tools</p>
+    </div>
+    <div>
+      <h3>Data Analytics & Reporting</h3>
+      <p>Power BI</p>
+      <h3>Development & Version Control</h3>
+      <p>Git, Agile Methodologies</p>
+      <h3>Cloud Services</h3>
+      <p>AWS, Google Cloud, Microsoft Azure</p>
+      <h3>Software & Tools</h3>
+      <p>Microsoft Office Suite (Excel, PowerPoint, Word), Adobe Creative Suite (Photoshop, Illustrator), Figma</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

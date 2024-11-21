@@ -7,7 +7,55 @@ body {
     color: #333;
     line-height: 1.6;
 }
+/* Container styling */
+.hover-container {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 20px; /* Add some spacing between containers */
+  }
+  
+  /* Disable the link */
+  .disabled-link {
+    pointer-events: none; /* Disables the link */
+  }
+  
+  /* Image styling */
+  .hover-image {
+    width: 325px;
+    height: auto;
+    opacity: 1.0; /* Start fully visible */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Rounded corners */
 
+  }
+  
+  /* Hover effects */
+  .hover-container:hover .hover-image {
+    opacity: 0.5; /* Dim the image */
+    transform: scale(1.05); /* Slightly enlarge the image */
+  }
+  
+  /* Popup styling */
+  .hover-popup {
+    display: none;
+    position: absolute;
+    top: 10px; /* Position from the top */
+    left: 10px; /* Position from the left */
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif; /* Apply Lato font */
+
+  }
+  
+  /* Show popup on hover */
+  .hover-container:hover .hover-popup {
+    display: block;
+  }
 /* Navigation styling */
 header {
     padding: 20px;
@@ -33,6 +81,11 @@ header {
 
 .nav a:hover {
     color: #555;
+}
+
+/* Active link styling */
+.nav a.active {
+    font-weight: 500; /* Makes the active link bold */
 }
 
 /* Intro section styling */

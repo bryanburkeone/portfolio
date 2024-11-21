@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop.ly Case Study</title>
+  <!-- Link to Google Fonts for Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <span class="name">Bryan Burke</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="details-section">
+      <div>
+        <h3>Project Duration</h3>
+        <p>May - June 2024</p>
+      </div>
+      <div>
+        <h3>Class</h3>
+        <p>COGS 126 <br> Thinking With Computers<br>Professor James D Hollan</p>
+      </div>
+      <div>
+        <h3>Team</h3>
+        <p>Griffen Bengard,<br> Bryan Burke,<br>Aaron McCully,<br>Kim Ho, Vivian Wong, Daisy Ye</p>
+      </div>
+      <div>
+        <h3>My Role</h3>
+        <p>UI/UX, User Research<br>Ideation, Wire Framing, LoFi/HiFi Prototyping</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="project-overview">
+    <div class="overview-text">
+      <h1>Project Overview</h1>
+      <p>This project focuses on enhancing the online shopping experience, particularly within the fashion industry, by addressing the common issue of decision fatigue. Online shoppers are often overwhelmed by the sheer volume of product options, making it difficult to efficiently browse, filter, and compare clothing items. Traditional e-commerce platforms typically require users to sift through irrelevant items or open multiple tabs to compare products, leading to a frustrating and cumbersome shopping experience.</p>
+      
+      <p>Our team set out to solve this problem by designing two innovative features:</p>
+      <ul>
+        <li>An AI-powered filtering tool that allows users to quickly narrow down clothing options based on personalized preferences (e.g., style, color, size, occasion).</li>
+        <li>An infinite canvas that lets users visually arrange, move, and compare favorited items side by side in a more intuitive, flexible way.</li>
+      </ul>
+      
+      <p>Our ultimate goal was to reduce cognitive overload and improve user satisfaction by creating a streamlined, visually engaging shopping experience that empowers users to make informed decisions with ease.</p>
+    </div>
+    
+    <div class="overview-videos">
+      <div class="video-container">
+        <img src="assets/hero_image_1.png" alt="Hero Image Preview 1" style="width: 100%; height: auto;">
+      </div>
+      <div class="video-container">
+        <img src="assets/hero_image_2.png" alt="Hero Image Preview 2" style="width: 100%; height: auto;">
+      </div>
+    </div>
+  </section>
+  <hr class="section-divider">
+
+  <section class="problem-statement">
+    <h2>Why? Cognitive Overload and Decision Fatigue are Main Contributors to Common E-commerce Problems</h2>
+  
+    <div class="problem-cards">
+      <div class="problem-card">
+        <img src="assets/business-icon-isolated-flat-design-260nw-367973630.png" alt="Conversion Icon" class="problem-icon">
+        <h3>Lower Conversion Rates</h3>
+        <p>Users who are unable to efficiently filter and compare products are more likely to leave the site without making a purchase. This reduces the number of completed transactions and ultimately affects the company’s revenue.</p>
+      </div>
+  
+      <div class="problem-card">
+        <img src="assets/shopping-cart-icon-cancel-illustration-260nw-1405493777.png" alt="Abandoned Cart Icon" class="problem-icon">
+        <h3>Abandoned Carts</h3>
+        <p>Decision fatigue can also lead to abandoned carts, as shoppers give up on purchases after becoming overwhelmed by too many choices or an inability to compare items.</p>
+      </div>
+  
+      <div class="problem-card">
+        <img src="assets/missed_target.png" alt="Missed Opportunities Icon" class="problem-icon">
+        <h3>Missed Opportunities</h3>
+        <p>Poor user experience means businesses miss out on building customer loyalty. Shoppers who struggle to navigate the site or find relevant products are less likely to return for future purchases, leading to lost opportunities for long-term customer retention.</p>
+      </div>
+    </div>
+  </section>
+  
+  <hr class="section-divider">
+  
+  <section class="research-discovery">
+    <h2>Research and Discovery</h2>
+    <div class="centered-content">
+      <p>
+        We conducted surveys with fellow UCSD students, transcribed their responses, and identified
+        <strong>key pain points</strong>, particularly decision fatigue, inefficient search, and challenges in product
+        comparison. Using these insights, we created a <strong>user journey map</strong> to deepen our understanding of
+        the user experience. Informed by <strong>academic research</strong> on Human-Computer Interaction (HCI) related to
+        interfaces and online shopping, we applied these findings to shape our initial low-fidelity (LoFi) designs.
+      </p>
+    </div>
+
+    <div class="research-images">
+        <figure class="research-figure">
+            <a href="assets/pain_points_highlights.png" target="_blank">
+                <img src="assets/pain_points_highlights.png" alt="Pain Points Highlights" class="research-image">
+            </a>
+            <figcaption>Highlights of Pain Points Identified Through User Surveys</figcaption>
+        </figure>
+        
+        <figure class="research-figure">
+            <a href="assets/user_journey_map.png" target="_blank">
+                <img src="assets/user_journey_map.png" alt="User Journey Map" class="research-image">
+            </a>
+            <figcaption>User Journey Map</figcaption>
+        </figure>
+    </div>
+
+    <section class="research-papers">
+      <div class="icon-heading-container">
+        <img src="assets/paper_icon.png" alt="Paper Icon" class="paper-icon">
+        <h3>Papers</h3>
+      </div>
+        <!-- Papers Overview in Three Columns -->
+        <div class="papers-content">
+            <!-- Paper 1 -->
+            <div class="paper">
+                <a href="https://dl.acm.org/doi/10.1145/192426.192435" target="_blank">
+                    <h3>Pad++: A Zooming Graphical Interface for Exploring Alternate Interface Physics</h3>
+                </a>
+                <p>The overwhelming number of choices and lack of comparison tools can lead to decision fatigue. Pad++'s zoomable interface inspired our infinite canvas, allowing users to intuitively organize and compare products, reducing the need to switch between tabs.</p>
+            </div>
+    
+            <!-- Paper 2 -->
+            <div class="paper">
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S096969891830225X?via%3Dihub" target="_blank">
+                    <h3>How Convenient Is It? Delivering Online Shopping Convenience to Enhance Customer Satisfaction and Encourage e-WOM</h3>
+                </a>
+                <p>This paper emphasized the importance of convenience in e-commerce. It influenced our AI-powered filter to streamline product search, making it faster and more personalized, addressing users' frustration with inefficient searches.</p>
+            </div>
+    
+            <!-- Paper 3 -->
+            <div class="paper">
+                <a href="https://ccom.unh.edu/sites/default/files/publications/Plumlee_06_TAP_Cognitive_costs_of_visual_comparisons.pdf" target="_blank">
+                    <h3>Zooming Versus Multiple Window Interfaces: Cognitive Costs of Visual Comparisons</h3>
+                </a>
+                <p>Comparing products side by side can be mentally taxing. This insight led to the infinite canvas, which simplifies product comparisons by reducing cognitive overload, offering a more user-friendly solution.</p>
+            </div>
+        </div>
+    </section>
+
+    <h3>Key Findings</h3>
+    <div class="centered-paragraph">
+      <p>
+        Users felt overwhelmed by the number of products, leading to decision fatigue and difficulty narrowing options. The search function was poorly organized, making it hard to find specific items. Shoppers also struggled with side-by-side product comparisons, leading to cognitive overload. From the survey findings, we created a user journey map to pinpoint key pain points at each stage, helping us understand user challenges which guided our design decisions.
+      </p>
+    </div>
+    
+</section>
+
+<hr class="section-divider">
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<section class="ideation-section">
+    <h2>Ideation and Prototypes</h2>
+    <p>After identifying key pain points, our team had clear goals in mind. We wanted to make navigating ecommerce sites faster and more intuitive. We wanted to be able to compare items side by side without multiple tabs and to find clothes that fit specific needs for specific events. To meet these goals, we focused on:</p>
+
+    <ul>
+        <li><strong>AI-powered filtering</strong> to narrow options efficiently.</li>
+        <li><strong>AI Wardrobe:</strong> Personalized clothing recommendations based on selected items.</li>
+        <li><strong>An infinite canvas</strong> for intuitive, side-by-side product comparison.</li>
+        <li><strong>An expandable infinite canvas,</strong> allowing users to zoom into subcategories and back out, mimicking in-store navigation and making it easier to navigate large inventories.</li>
+    </ul>
+
+
+    <h3 style="margin-top: 100px;"">How Might We create a shopping experience thats easier to navigate online inventories and compare clothing selctions in an intuitive and novel way?</h3>
+
+    <div class="figure-container">
+      <!-- Figure 1 -->
+      <figure class="figure-item">
+        <img src="assets/nav_demo_assets/navigation_wf.png" alt="Navigation Wireframe" class="figure-image">
+        <figcaption>Early sketch of how the site navigation might look and operate</figcaption>
+      </figure>
+      
+      <!-- Figure 2 -->
+      <figure class="figure-item">
+        <img src="assets/nav_demo_assets/EIC-5-imageonline.co-merged.png" alt="Expanded Infinite Canvas" class="figure-image">
+        <figcaption>Early sketch of site navigation and interactive drill down</figcaption>
+      </figure>
+
+      <!-- Videos Section -->
+<div class="video-container">
+  <!-- Proof of Concept Demo -->
+  <div class="video-item">
+    <div style="padding:43.14% 0 0 0;position:relative;">
+      <iframe 
+        src="https://player.vimeo.com/video/1031767987?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+        title="poc_navigation_demo">
+      </iframe>
+    </div>
+    <p>Proof of Concept Demo I made using React to help teammates understand the navigation behavior</p>
+  </div>
+  
+  <!-- Higher Fidelity Demo -->
+  <div class="video-item">
+    <div style="padding:74.16% 0 0 0;position:relative;">
+      <iframe 
+        src="https://player.vimeo.com/video/1031768000?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+        title="Lofi_nav_demo">
+      </iframe>
+    </div>
+    <p>Higher fidelity navigation demo showcasing a better idea of the interaction</p>
+  </div>
+</div>
+
+<!-- Centered Single Video -->
+<div class="video-centered">
+  <div class="video-item">
+    <div style="padding:54.07% 0 0 0;position:relative;">
+      <iframe 
+        src="https://player.vimeo.com/video/1031768054?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+        title="hifi_nav_demo">
+      </iframe>
+    </div>
+    <p>High Fidelity demo demonstrating how the user might use the interface to navigate and compare clothes</p>
+  </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+      <h3 style="margin-top: 100px;"">How Might We create a shopping experience that leverages artificial intelligence to recommend clothing choices in a more focused way?</h3>
+
+      <figure class="figure-item">
+        <img src="assets/Wardrobe_Assets/inital_wireframe.png" alt="Wardrobe Wireframe" class="figure-image">
+        <figcaption>Wardrobe sketch demonstrating early ideas for AI recommendations</figcaption>
+      </figure>
+      
+      <!-- Figure 2 -->
+      <figure class="figure-item">
+        <img src="assets/Wardrobe_Assets/Frame 198-imageonline.co-merged.png" alt="Wardrobe Frames" class="figure-image">
+        <figcaption>Figma screens showing how the flow of user selections and recomendations might work</figcaption>
+      </figure>
+
+      <!-- Videos Section -->
+      <div class="video-container">
+        <!-- AI Wardrobe Demo -->
+        <div class="video-item">
+          <div style="padding:74.36% 0 0 0;position:relative;">
+            <iframe 
+              src="https://player.vimeo.com/video/1031767125?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+              title="AI wardrobe Demo (1)">
+            </iframe>
+          </div>
+          <p>AI wardrobe and recommendation demo</p>
+        </div>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+
+</section>
+
+<hr class="section-divider">
+
+<section class="final-thoughts-section">
+  <h2>Feedback and Final Thoughts</h2>
+  <p>
+    After presenting the first iteration, we received <strong>mostly positive feedback</strong>, with many students expressing interest in our project. Constructive feedback highlighted potential <strong>confusion with navigation</strong>, including the challenge of remembering the user's location within the site, as well as the <strong>significant resources</strong> and time required for a company to update its current e-commerce platform. Unfortunately, the class ended, and we could no longer dedicate time to the project. However, I continued working on it in my spare time and created a <strong>new iteration</strong> that achieves our original design goals while being <strong>far less resource-intensive</strong> for companies to implement. The <strong>final prototype</strong> is included below. </p>
+
+
+    <section class="final-iteration-demo">
+      <h2>Final Prototype</h2>
+      <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-item">
+          <div style="padding:54.06% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/1031766107?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+              title="final_demo_1">
+            </iframe>
+          </div>
+          <p>Prototype demonstrating how an AI assistant could be incorporated into a basic ecommerce layout</p>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-item">
+          <div style="padding:54.06% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/1031766068?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+              title="final_demo_2">
+            </iframe>
+          </div>
+          <p>Prototype demonstrating how an infinite canvas could be used to compare and choose clothes</p>
+        </div>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    </section>
+</section>
+
+
+<section class="reflection-section">
+  <h2>Reflection and Learnings</h2>
+  
+  <h3>Challenges Faced</h3>
+  <p>
+    One of the key challenges we faced as a team was <em>clearly defining the problems</em> we wanted to address and <em>brainstorming wireframe ideas</em> that effectively tackled those issues. Aligning on the problems and translating them into <em>viable design solutions</em> required strong collaboration and communication. Additionally, coordinating everyone’s schedules to establish a structured design process proved difficult. This lack of alignment and consistency impacted the overall workflow and hindered our ability to maintain a unified approach throughout the project.
+  </p>
+  
+  <h3>What Would You Do Differently?</h3>
+  <p>
+    In hindsight, I believe crafting <strong>more robust survey questions</strong> that elicited deeper user responses would have provided us with <strong>actionable insights</strong> to guide more informed design decisions. Additionally, establishing a <strong>clear and collaborative design process</strong> early on would have ensured better alignment and more effective contributions from the team. With stronger feedback and a structured approach to ideation, we could have collaborated more efficiently to develop <strong>more polished and user-centered solutions</strong>.
+  </p>
+</section>
+    
+
+<style>
+  body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /* Set all text to Lato Light */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation styling */
+header {
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-weight: 300; /* Ensure Lato Light is applied */
+    font-size: 1.2em;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 300; /* Ensure Lato Light is applied */
+}
+
+.nav a:hover {
+    color: #555;
+}
+
+/* Active link styling */
+.nav a.active {
+    font-weight: 500; /* Makes the active link bold */
+}
+.video-centered {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center the video horizontally */
+  align-items: center; /* Center the video vertically, if necessary */
+  margin: 20px auto; /* Add vertical spacing and center container */
+  width: 100%; /* Ensure it spans the full width of the parent */
+}
+
+.video-item {
+  text-align: center; /* Center-align the caption */
+  max-width: 600px; /* Set a maximum width for the video container */
+}
+
+.video-item video {
+  width: 100%; /* Make the video responsive */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.video-item p {
+  margin-top: 10px; /* Add spacing above the caption */
+  font-size: 1em; /* Adjust caption font size */
+  color: #555; /* Set caption color */
+}
+    /* General Heading Styling */
+    h1 {
+        font-size: 2.0em; /* Increase or decrease the value as needed */
+        font-weight: bold; /* Optional: Make it bold */
+        margin-bottom: 20px; /* Adds space below the heading */
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+        background: url('assets/Hero_Image_logo.png') top center/70% no-repeat;
+        height: 600px;
+        position: relative;
+        font-family: 'Lato', sans-serif; /* Set font to Lato */
+    }
+
+    /* Details Section Styling */
+    .details-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+        color: #333;
+        font-size: 1em;
+        padding: 20px;
+        width: 60%; /* Slight margin on the sides */
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0px; /* Position at the bottom of the hero section */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px; /* Optional rounded corners */
+        text-align: center; /* Center-align text in each section */
+    }
+
+    .details-section div {
+        width: 20%; /* Each section takes 20% of the width */
+    }
+
+    .details-section h3 {
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #888;
+    }
+
+    .details-section p {
+        margin: 5px 0 0;
+        font-size: 0.9em;
+        color: #8f8f8f;
+        line-height: 1.6;
+    }
+
+    /* Project Overview Styling */
+    .project-overview {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .overview-text {
+        width: 50%;
+        padding-right: 20px;
+    }
+
+    .overview-videos {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 45%;
+    }
+
+    .video-container video {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive styling for small screens */
+    @media (max-width: 768px) {
+        .project-overview {
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;
+        }
+
+        .overview-text {
+            width: 100%; /* Full width for text */
+            padding-right: 0; /* Remove padding on small screens */
+        }
+
+        .overview-videos {
+            width: 100%; /* Full width for videos */
+            margin-top: 20px; /* Add some space between text and videos */
+        }
+    }
+
+    /* General Styling for Problem Statement Section */
+.problem-statement {
+  max-width: 1200px; /* Set maximum width */
+  margin: 0 auto; /* Center section horizontally */
+  text-align: center; /* Center-align text */
+  padding: 40px 20px; /* Add padding for spacing */
+}
+
+.problem-statement h2 {
+  font-size: 1.8em; /* Adjust heading size */
+  font-weight: bold; /* Bold heading */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+.problem-cards {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Spread cards evenly */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Wrap cards on smaller screens */
+  gap: 20px; /* Space between cards */
+}
+
+.problem-card {
+  width: 30%; /* Set width for each card */
+  min-width: 250px; /* Ensure minimum width */
+  text-align: center; /* Center-align card text */
+}
+
+.problem-icon {
+  width: 70px; /* Icon size */
+  height: 70px;
+  margin-bottom: 10px; /* Space below icon */
+}
+
+.problem-card h3 {
+  font-size: 1.2em; /* Heading size for cards */
+  color: #333; /* Text color */
+  margin: 10px 0; /* Spacing above and below */
+}
+
+.problem-card p {
+  font-size: 0.95em; /* Paragraph font size */
+  color: #555; /* Lighter text color */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .problem-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .problem-card {
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+  /* Divider styling */
+  .section-divider {
+      width: 80%;
+      margin: 40px auto;
+      border: none;
+      border-top: 1px solid #ddd; /* Light gray color */
+  }
+
+  /* Research and Discovery Section */
+  .research-discovery {
+      text-align: center;
+      padding: 40px 20px;
+  }
+
+  .research-discovery h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  .research-discovery p {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .research-discovery h3 {
+      font-size: 1.5em;
+      color: #333;
+      font-weight: bold;
+      margin-top: 30px;
+  }
+
+  /* Flex container for side-by-side images */
+  .research-images {
+      display: flex;
+      flex-direction: column; /* Stack images vertically */
+      gap: 20px; /* Space between the images */
+      align-items: center; /* Center the images horizontally */
+  }
+
+  .research-figure {
+      width: 80%; /* Set a consistent width for each image container */
+      text-align: center;
+      margin: 20px auto;
+  }
+
+  .research-image {
+      width: 100%; /* Ensure each image takes up the full width of its container */
+      height: auto; /* Maintain aspect ratio */
+      cursor: pointer; /* Changes cursor to pointer for clickable effect */
+      border-radius: 5px; /* Optional: Rounded corners */
+      object-fit: cover; /* Ensures the image fills the container evenly */
+  }
+
+  /* Lightbox Modal Styling */
+  .lightbox {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  }
+
+  .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+  }
+
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+  }
+
+    /* Research Papers Section Styling */
+.research-papers {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.papers-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.paper-icon {
+    width: 60px; /* Adjust icon size as needed */
+}
+
+.papers-header h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.papers-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.paper {
+    width: 30%; /* Each column takes up about one-third of the width */
+    min-width: 250px;
+    text-align: left;
+}
+
+.paper h3 {
+    font-size: 1.1em;
+    color: #0073e6; /* Link color for headings */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.paper p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.ideation-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center; /* Centers the text in the section */
+}
+
+.ideation-section h2 {
+    font-size: 1.8em; /* Same size as Research and Discovery */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ideation-section p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ideation-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ideation-section li {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.ideation-section li strong {
+    font-weight: bold;
+    color: #000; /* Emphasize key terms */
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555; /* Sets a lighter color for the caption text */
+    margin-top: 8px; /* Adds space between the image and caption */
+}
+
+/* Container for figures */
+.figure-container {
+  display: flex; /* Enable flexbox */
+  justify-content: space-between; /* Space out figures evenly */
+  align-items: flex-start; /* Align figures at the top */
+  gap: 20px; /* Space between figures */
+  margin-top: 40px; /* Space above the figure container */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Individual figure item */
+.figure-item {
+  flex: 1; /* Make each figure item flexible */
+  max-width: 48%; /* Limit each figure to 48% width of the container */
+  text-align: center; /* Center-align captions */
+}
+
+/* Image inside the figure */
+.figure-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+
+/* Figure caption styling */
+figure figcaption {
+  font-size: 0.9em;
+  color: #555; /* Light gray text */
+  margin-top: 10px; /* Space above the caption */
+  line-height: 1.4;
+}
+
+
+/* Center single video in container */
+.video-container {
+  display: flex;
+  justify-content: center; /* Center the video horizontally */
+  margin-top: 40px; /* Add space above the video */
+  width: 100%;
+  gap: 20px;
+}
+
+.video-item {
+  text-align: center; /* Center-align the caption */
+}
+
+video {
+  width: 90%; /* Adjust width as needed */
+  max-width: 600px; /* Limit maximum width */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+}
+
+.video-item p {
+  font-size: 1em; /* Caption font size */
+  color: #555; /* Caption color */
+  margin-top: 10px; /* Space above the caption */
+}
+
+
+.feedback-section {
+  max-width: 1200px;
+  margin: 40px auto; /* Center the section horizontally and add vertical spacing */
+  text-align: center; /* Center-align the text */
+  padding: 20px;
+  font-size: 1em; /* Base font size */
+  line-height: 1.8; /* Increase line height for readability */
+  color: #333;
+}
+
+.feedback-section h2 {
+  font-size: 1.8em; /* Make the heading prominent */
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.feedback-section p {
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+.final-thoughts-section, .reflection-section {
+  max-width: 1200px;
+  margin: 40px auto; /* Center horizontally with spacing */
+  text-align: center; /* Center-align content */
+  line-height: 1.8; /* Improve readability */
+}
+
+.final-thoughts-section h2, .reflection-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.final-thoughts-section p, .reflection-section p {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 20px;
+  text-align: justify; /* Align text for better readability */
+}
+
+.final-thoughts-section h3, .reflection-section h3 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.video-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.video-container video {
+  max-width: 100%;
+  width: 600px; /* Adjust as needed */
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.video-container p {
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.final-iteration-demo {
+  text-align: center;
+  margin: 50px 20px;
+}
+
+.final-iteration-demo h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* Add spacing between the two videos */
+  margin-top: 20px;
+}
+
+.video-item {
+  width: 45%; /* Adjust width of each video container */
+  text-align: center;
+}
+
+.video-item video {
+  width: 100%; /* Ensure the video takes up full width of the container */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.centered-content {
+  max-width: 1200px; /* Limit the width to 1200px */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add some padding for spacing */
+  text-align: justify; /* Optional: Justify text for better readability */
+  line-height: 1.8; /* Improve line spacing for readability */
+  font-size: 1em; /* Ensure readable font size */
+  color: #333; /* Set text color */
+}
+.icon-heading-container {
+  display: flex; /* Use flexbox to align items side by side */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the container */
+  gap: 10px; /* Add space between the icon and the heading */
+  max-width: 1200px; /* Optional: limit the max width */
+  margin: 0 auto; /* Center the container on the page */
+  text-align: center; /* Center-align the content */
+}
+
+.paper-icon {
+  width: 50px; /* Adjust the size of the icon */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.icon-heading-container h3 {
+  font-size: 1.5em; /* Adjust the size of the heading */
+  color: #333; /* Set text color */
+  margin: 0; /* Remove default margin */
+}
+.centered-paragraph {
+  max-width: 1200px; /* Set maximum width */
+  margin: 0 auto; /* Center the paragraph horizontally */
+  text-align: center; /* Center-align the text */
+  line-height: 1.8; /* Improve readability with spacing */
+  padding: 0 20px; /* Add padding for smaller screens */
+  font-size: 1em; /* Adjust font size for readability */
+  color: #333; /* Optional: Set text color */
+}
+/* General paragraph styling */
+p {
+  line-height: 1.8;
+  margin: 20px 10px;
+}
+
+/* Add spacing around paragraphs for smaller screens */
+@media (max-width: 768px) {
+  p {
+    margin: 20px 10px; /* Adds space around the paragraphs */
+    padding: 20px; /* Adds internal spacing inside the paragraph */
+  }
+
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column; /* Stack videos vertically */
+    align-items: center; /* Center the videos */
+  }
+
+  .video-item {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Space between stacked videos */
+    width:100%;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .figure-item {
+    max-width: 100%; /* Make figures stack vertically */
+    margin-bottom: 20px; /* Add space between stacked figures */
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .papers-content {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center;
+    }
+
+    .paper {
+        width: 80%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .details-section {
+      width: 100%;
+    }
+
+}
+
+</style>
+<script>
+
+</script>
+</body>
+</html>
+
