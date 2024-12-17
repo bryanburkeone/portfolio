@@ -11,12 +11,11 @@
 <body>
 
   <!-- Header -->
-  <header>
+  <header id="top">
     <div class="nav">
       <span class="name">Bryan Burke</span>
       <nav>
         <a href="#" class="active">Home</a>
-        <a href="resume.html">Resume</a>
       </nav>
     </div>
   </header>
@@ -30,50 +29,93 @@
     <div class="intro-image">
       <img src="assets/landingPhoto.png" alt="Bryan's Illustration">
     </div>
+    <div class="scroll-down-cue">
+      <a href="#projects-section" class="scroll-down-cue">
+        <p>Projects</p>
+        <span class="arrow">&#x2193;</span> <!-- Down arrow -->
+      </a>
+    </div>
   </section>
   
   <!-- Projects Section -->
-  <div class="projects-section">
+  <div id="projects-section" class="projects-section">
     <h2>Product Design Projects</h2>
     <hr>
     <div class="project-list">
+
       <!-- Project 1: SHOP.LY -->
-      <div class="project-item">
+      <div class="project-card">
         <a href="shoply-case-study.html" target="_blank">
-          <img src="assets/Shop.ly_web.png" alt="Shop.ly Logo">
+          <img src="assets/Shop.ly_web.png" alt="Shop.ly Logo" class="project-image">
         </a>
-      </div>
-
-      <!-- Beach Rental Kiosk -->
-      <div class="hover-container">
-        <a href="https://sites.google.com/view/bryan-burke-1/beach-rental-kiosk" target="_blank" class="disabled-link">
-          <img 
-            src="assets/Beach_Kiosk_logo_white_backgriund.png" 
-            alt="Beach Rental Kiosk Logo" 
-            class="hover-image"
-          />
-        </a>
-        <div class="hover-popup">
-          Coming Soon
+        <div class="project-content">
+          <h3>Shop.ly</h3>
+          <p>
+            Enhancing the online shopping experience by addressing decision fatigue through AI filtering and an infinite canvas for intuitive product comparison.
+          </p>
+          <div class="project-tags">
+            <span class="tag">UI/UX R&D</span>
+            <span class="tag">HCI Academic Research</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Figma</span>
+            <span class="tag">User Surveys</span>
+            <span class="tag">Journey Mapping</span>
+          </div>
         </div>
       </div>
 
-      <!-- Visual Pathways -->
-      <div class="hover-container">
-        <a href="https://sites.google.com/view/bryanburke/visualpathways" target="_blank" class="disabled-link">
-          <img 
-            src="assets/Visual_Pathways_logo.png" 
-            alt="Visual Pathways Logo" 
-            class="hover-image"
-          />
+      <!-- Beach Rental Kiosk (In Progress) -->
+      <div class="project-card in-progress">
+        <div class="banner">Coming Soon</div>
+        <a href="#" class="disabled-link">
+          <img src="assets/Beach_Kiosk_logo_white_backgriund.png" alt="Beach Rental Kiosk Logo" class="project-image">
         </a>
-        <div class="hover-popup">
-          Coming Soon
+        <div class="project-content">
+          <h3>Beach Rental Kiosk</h3>
+          <p>
+            Designed a beach equipment rental kiosk to improve accessibility and address forgotten beach essentials like towels and sunscreen.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Physical Product Design</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Field Research</span>
+            <span class="tag">User Surveys</span>
+            <span class="tag">User Personas</span>
+            <span class="tag">UI/UX Design</span>
+          </div>
         </div>
       </div>
+
+      <!-- Visual Pathways (In Progress) -->
+      <div class="project-card in-progress">
+        <div class="banner">Coming Soon</div>
+        <a href="#" class="disabled-link">
+          <img src="assets/Visual_Pathways_logo.png" alt="Visual Pathways Logo" class="project-image">
+        </a>
+        <div class="project-content">
+          <h3>Visual Pathways</h3>
+          <p>
+            Leveraged data visualization techniques and design thinking to present complex datasets in an intuitive, visual format.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Social Computing</span>
+            <span class="tag">AR/VR</span>
+            <span class="tag">Ed Tech</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Live Prototyping</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
+  <!-- Scroll-to-Top Cue -->
+  <a href="#top" class="scroll-up-cue">
+    <p>Back to Top</p>
+    <span class="arrow">&#x2191;</span> <!-- Up arrow -->
+  </a>
+
 </body>
 </html>
-

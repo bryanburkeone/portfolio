@@ -7,6 +7,10 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /* Container styling */
 .hover-container {
     display: inline-block;
@@ -140,17 +144,18 @@ header {
     }
 }
 
-/* Projects section styling */
+/* Projects Section */
 .projects-section {
+    margin-top: 100vh; /* Push the section below the viewport */
     text-align: center;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly offscreen */
-    animation: drift-in 1s ease-out forwards; /* Apply animation */
-    animation-delay: 1s; /* Delay to start after intro section */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: drift-in 1s ease-out forwards;
+    animation-delay: 1s;
 }
 
 .projects-section h2 {
-    font-weight: 300; /* Lato Light */
+    font-weight: 300;
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -161,59 +166,209 @@ header {
     border: 0.5px solid #ddd;
 }
 
-/* Project list styling */
+/* Project List */
 .project-list {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-    padding: 0px 100px 0px 100px;
-    gap: 0%; /* Set gap as a percentage of the container's width */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    padding: 20px;
 }
 
-.project-item {
+/* Project Card */
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px; /* Card width */
     text-align: center;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly offscreen */
-    animation: drift-in 1s ease-out forwards; /* Apply animation */
-    animation-delay: 1.2s; /* Additional delay for each project item */
+    position: relative; /* Enable positioning for banner */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Project item image styling */
-.project-item img {
-    width: 300px; /* Image size */
+/* Hover Effects */
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-image {
+    width: 80%;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.project-item img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+.project-card:hover .project-image {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.project-item p {
-    font-size: 1.2em;
-    font-weight: 300; /* Lato Light */
+/* Project Content */
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.project-content p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Project Tags */
+.project-tags {
     margin-top: 10px;
+    text-align: center;
 }
 
-/* Responsive styling for smaller screens */
+.tag {
+    display: inline-block;
+    background-color: #e7f3ff;
+    color: #0073e6;
+    font-size: 0.9em;
+    margin: 4px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #0073e6;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* "Coming Soon" Banner */
+.project-card.in-progress {
+    opacity: 0.7; /* Slightly opaque for in-progress projects */
+}
+
+.project-card.in-progress .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1C4E6D; /* Semi-transparent black */
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 0;
+    z-index: 2; /* Ensure banner appears above content */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .project-image {
+        width: 100%; /* Adjust image size */
+    }
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
     .intro-section {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        text-align: center; /* Center text */
+        flex-direction: column;
+        text-align: center;
     }
 
     .intro-text {
-        max-width: 100%; /* Full width for text */
-        margin-top: 20px; /* Space between image and text */
+        max-width: 100%;
+        margin-top: 20px;
     }
 
     .project-list {
-        flex-direction: column; /* Stack items vertically */
-        padding: 0; /* Adjust padding for mobile */
+        flex-direction: column;
+        padding: 0;
     }
 
     .project-item {
-        margin-bottom: 20px; /* Space between items */
+        margin-bottom: 20px;
+    }
+
+    .scroll-down-cue,
+    .scroll-up-cue {
+        display: none !important; /* Forcefully hide both scroll cues */
+    }
+
+    .projects-section {
+        margin-top: 0; /* Remove large top margin for mobile view */
     }
 }
+
+/* Scroll Cue Styling */
+.scroll-down-cue,
+.scroll-up-cue {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0; /* Initially hidden */
+    animation: fade-in 1s ease-out forwards;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-down-cue {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1.75s; /* Delay scroll-down cue */
+}
+
+.scroll-up-cue {
+    margin-top: 40px; /* Add space above scroll-up cue */
+}
+
+.scroll-down-cue p,
+.scroll-up-cue p {
+    font-size: 1em;
+    font-weight: 300;
+    color: #555;
+    margin: 0;
+}
+
+.scroll-down-cue .arrow,
+.scroll-up-cue .arrow {
+    display: block;
+    font-size: 2rem;
+    color: #1C4E6D;
+    animation: bounce 2s infinite;
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
